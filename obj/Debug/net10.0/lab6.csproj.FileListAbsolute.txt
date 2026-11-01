@@ -1,0 +1,14 @@
+/home/borsch/university/lab6/bin/Debug/net10.0/lab6
+/home/borsch/university/lab6/bin/Debug/net10.0/lab6.deps.json
+/home/borsch/university/lab6/bin/Debug/net10.0/lab6.runtimeconfig.json
+/home/borsch/university/lab6/bin/Debug/net10.0/lab6.dll
+/home/borsch/university/lab6/bin/Debug/net10.0/lab6.pdb
+/home/borsch/university/lab6/obj/Debug/net10.0/lab6.GeneratedMSBuildEditorConfig.editorconfig
+/home/borsch/university/lab6/obj/Debug/net10.0/lab6.AssemblyInfoInputs.cache
+/home/borsch/university/lab6/obj/Debug/net10.0/lab6.AssemblyInfo.cs
+/home/borsch/university/lab6/obj/Debug/net10.0/lab6.csproj.CoreCompileInputs.cache
+/home/borsch/university/lab6/obj/Debug/net10.0/lab6.dll
+/home/borsch/university/lab6/obj/Debug/net10.0/refint/lab6.dll
+/home/borsch/university/lab6/obj/Debug/net10.0/lab6.pdb
+/home/borsch/university/lab6/obj/Debug/net10.0/lab6.genruntimeconfig.cache
+/home/borsch/university/lab6/obj/Debug/net10.0/ref/lab6.dll
