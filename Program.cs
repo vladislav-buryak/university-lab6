@@ -4,10 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Установка кодировки для корректного отображения кириллицы
-        Console.OutputEncoding = System.Text.Encoding.UTF8;
-        Console.InputEncoding = System.Text.Encoding.UTF8;
-
+        
         int m, n;
 
         // Ввод размеров матрицы с защитой от ошибок ввода
