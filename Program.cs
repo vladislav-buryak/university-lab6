@@ -8,29 +8,40 @@ class Program
         Console.OutputEncoding = System.Text.Encoding.UTF8;
         Console.InputEncoding = System.Text.Encoding.UTF8;
 
-        // Ввод размеров матрицы
+        int m, n;
+
+        // Ввод размеров матрицы с защитой от ошибок ввода
         Console.Write("Введите количество строк (m): ");
-        int m = int.Parse(Console.ReadLine());
+        while (!int.TryParse(Console.ReadLine(), out m) || m <= 0)
+        {
+            Console.Write("Ошибка. Введите положительное целое число для количества строк: ");
+        }
 
         Console.Write("Введите количество столбцов (n): ");
-        int n = int.Parse(Console.ReadLine());
+        while (!int.TryParse(Console.ReadLine(), out n) || n <= 0)
+        {
+            Console.Write("Ошибка. Введите положительное целое число для количества столбцов: ");
+        }
 
         double[,] matrix = new double[m, n];
-        
+
         Console.WriteLine("\nВведите элементы матрицы:");
         for (int i = 0; i < m; i++)
         {
             for (int j = 0; j < n; j++)
             {
-                Console.Write($"элемент [{i},{j}]: ");
-                matrix[i, j] = double.Parse(Console.ReadLine());
+                Console.Write($"Элемент [{i},{j}]: ");
+                while (!double.TryParse(Console.ReadLine(), out matrix[i, j]))
+                {
+                    Console.Write($"Ошибка. Введите число для элемента [{i},{j}]: ");
+                }
             }
         }
 
         Console.WriteLine("\nИсходная матрица:");
         PrintMatrix(matrix, m, n);
 
-
+        // Обработка строк матрицы
         for (int i = 0; i < m; i++)
         {
             double sum = 0;
@@ -42,6 +53,7 @@ class Program
 
             double average = sum / n;
 
+            // Вычитание среднего арифметического из всех элементов строки, кроме последнего
             for (int j = 0; j < n - 1; j++)
             {
                 matrix[i, j] -= average;
@@ -52,7 +64,8 @@ class Program
         Console.WriteLine("\nРезультат (после вычитания среднего арифметического, кроме последнего элемента в строке):");
         PrintMatrix(matrix, m, n);
     }
-    
+
+    // Вспомогательный метод для красивого вывода матрицы
     static void PrintMatrix(double[,] matrix, int m, int n)
     {
         for (int i = 0; i < m; i++)
